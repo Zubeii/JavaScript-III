@@ -10,40 +10,39 @@
 */
 
 // Principle 1
-function sayName(name) {
-	console.log(this);
-	return name;
-}
-sayName('Amine');
+// function sayName(name) {
+// 	console.log(this);
+// 	return name;
+// }
+// sayName('Amine');
 // code example for Window Binding
 
 // Principle 2
-
-const myObj = {
-	greeting : 'Hello',
-	sayHello : function(name) {
-		console.log(`${this.greeting} my name is ${name}`);
-		console.log(this);
-	},
-};
-myObj.sayHello('Amine');
+// const myObj = {
+// 	greeting : 'Hello',
+// 	sayHello : function(name) {
+// 		console.log(`${this.greeting} my name is ${name}`);
+// 		console.log(this);
+// 	},
+// };
+// myObj.sayHello('Amine');
 // code example for Implicit Binding
 
 // Principle 3
-function Person(obj) {
-	this.name = obj.name;
-	this.age = obj.age;
-	this.speak = function() {
-		console.log('new binding', this);
-		return 'Hello, my name is ${this.name}, and I am ${this.age} years old.';
-	};
-}
+// function Person(obj) {
+// 	this.name = obj.name;
+// 	this.age = obj.age;
+// 	this.speak = function() {
+// 		console.log('new binding', this);
+// 		return 'Hello, my name is ${this.name}, and I am ${this.age} years old.';
+// 	};
+// }
 
-const amine = new Person({ name: 'Amine', age: 35 });
-const shana = new Person({ name: 'Shana', age: 32 });
+// const amine = new Person({ name: 'Amine', age: 35 });
+// const shana = new Person({ name: 'Shana', age: 32 });
 
-shana.speak();
-amine.speak();
+// shana.speak();
+// amine.speak();
 // code example for New Binding
 
 // Principle 4
